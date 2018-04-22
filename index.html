@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CantoGen</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/names.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <abbr title="Coming soon-ish?" style="float: right; margin-top: 10px;">粵語版</abbr>
+
+  <h1>CantoGen</h1>
+  <p>For whenever you need some (mostly non-ridiculous) Hong Kong names for your design design mock-ups, or just for making some fake people!</p>
+
+  <div class="row">  
+    <div class="four columns">
+      <label>First name type</label>
+      <input type="radio" name="format" value="en"><span class="label-body" style="margin-right: 5%;"> English</span><br>
+      <input type="radio" name="format" value="zh"><span class="label-body" style="margin-right: 5%;"> Cantonese</span><br>
+      <input type="radio" name="format" value="bo" checked><span class="label-body" style="margin-right: 5%;"> English &amp; Cantonese</span>
+    </div>
+
+    <div class="four columns">
+      <label>Gender</label>
+      <input type="radio" name="gender" value="f"><span class="label-body" style="margin-right: 5%;"> Female</span><br>
+      <input type="radio" name="gender" value="m"><span class="label-body" style="margin-right: 5%;"> Male</span><br>
+      <input type="radio" name="gender" value="x" checked><span class="label-body" style="margin-right: 5%;"> Either</span>
+    </div>
+
+    <div class="four columns">
+      <label>Amount of names</label>
+      <input title="Be nice to your browser, don't generate more than ~1000 at a time." type="number" value="1"><br>
+
+      <input id="btn_submit" type="submit" value="Generate!" class="button-primary">
+    </div>
+  </div>
+
+  <div class="row" id="resultspaper">
+    <b>Generated Names</b>
+    <p id="txt_results"></p>
+  </div>
+
+  <p style="text-align: center; margin-top: 25px;">Developed in 🇭🇰 Hong Kong by <a href="mailto:anthony.amici@grayscale.com.hk">Anthony Amici</a></p>
+</div>
+</body>
+</html>
