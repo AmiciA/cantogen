@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CantoGoon</title>
+  <title>CantoGen</title>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
@@ -15,41 +15,48 @@
 
 </head>
 <body>
-<div class="container">
-  <abbr title="Coming soon-ish?" style="float: right; margin-top: 10px;">粵語版</abbr>
+  <div class="container">
+    <!--<abbr title="Coming soon-ish?" style="float: right; margin-top: 10px;">粵語版</abbr>-->
 
-  <h1>CantoGen</h1>
-  <p>For whenever you need some (mostly non-ridiculous) Hong Kong names for your design design mock-ups, or just for making some fake people!</p>
+    <h1>CantoGen</h1>
+    <p>Making a design mock-up and need some Hong Kong users' names as placeholder data? You've come to the right place! Wanna know why Hongkongers have such interesting 🇬🇧 names? Then check out <a href="https://www.theatlantic.com/international/archive/2012/10/hong-kong-loves-weird-english-names/263103/">this article</a>!</p>
 
-  <div class="row">  
-    <div class="four columns">
-      <label>First name type</label>
-      <input type="radio" name="format" value="en"><span class="label-body" style="margin-right: 5%;"> English</span><br>
-      <input type="radio" name="format" value="zh"><span class="label-body" style="margin-right: 5%;"> Cantonese</span><br>
-      <input type="radio" name="format" value="bo" checked><span class="label-body" style="margin-right: 5%;"> English &amp; Cantonese</span>
+    <div class="row">  
+      <div class="column">
+        <h2>First name type</h2>
+        
+        <label for="E"><input type="radio" name="format" value="en" id="E" checked> English</label>
+        <label for="Z"><input type="radio" name="format" value="zh" id="Z">         Cantonese</label>
+        <label for="B"><input type="radio" name="format" value="bo" id="B">         Combined</label>
+      </div>
+
+      <div class="column">
+        <h2>Gender</h2>
+        
+        <label for="F"><input type="radio" name="gender" value="f" id="F">         Female</label>
+        <label for="M"><input type="radio" name="gender" value="m" id="M">         Male</label>
+        <label for="X"><input type="radio" name="gender" value="x" id="X" checked> Female &amp; Male</label>
+      </div>
+
+      <div class="column">
+        <h2>Amount of names</h2>
+        <input title="Be nice to your browser, don't generate more than ~1000 at a time." type="number" value="5"><br>
+      </div>
     </div>
 
-    <div class="four columns">
-      <label>Gender</label>
-      <input type="radio" name="gender" value="f"><span class="label-body" style="margin-right: 5%;"> Female</span><br>
-      <input type="radio" name="gender" value="m"><span class="label-body" style="margin-right: 5%;"> Male</span><br>
-      <input type="radio" name="gender" value="x" checked><span class="label-body" style="margin-right: 5%;"> Either</span>
+    <div class="row">
+      <input id="btn_submit" type="submit" value="Generate!">
     </div>
 
-    <div class="four columns">
-      <label>Amount of names</label>
-      <input title="Be nice to your browser, don't generate more than ~1000 at a time." type="number" value="1"><br>
-
-      <input id="btn_submit" type="submit" value="Generate!" class="button-primary">
+    <div class="row" id="resultspaper">
+      <h2>Generated Names</h2>
+      <p id="txt_results"></p>
+      <aside id="disclaimer" style="display: none;">Names bearing any resemblance to actual persons, living or dead is purely coincidental.</aside>
     </div>
   </div>
-
-  <div class="row" id="resultspaper">
-    <b>Generated Names</b>
-    <p id="txt_results"></p>
-  </div>
-
-  <p style="text-align: center; margin-top: 25px;">Developed in 🇭🇰 Hong Kong by <a href="mailto:anthony.amici@grayscale.com.hk">Anthony Amici</a></p>
-</div>
+  
+  <footer>
+    <p>Developed in 🇭🇰 Hong Kong by <a href="mailto:anthony.amici@grayscale.com.hk">Anthony Amici</a> with data from <a href="http://www.studentsoftheworld.info">Students of the World</a>.</p>
+  </footer>
 </body>
 </html>

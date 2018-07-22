@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       else if (nameFormat == 'zh') { resultsString = getLastName() + " " + getFirstName(nameGender); }
       else if (nameFormat == 'bo') { resultsString = getEngName(nameGender) + " " + getLastName() + " " + getFirstName(nameGender); }
     
-      document.getElementById("txt_results").innerHTML += '<br>' + resultsString;
+      document.getElementById("txt_results").innerHTML += resultsString + '<br>';
+      document.getElementById("disclaimer").style.display = "inline";
     
       if (nameGenderReset == true) { nameGender = 'x' }
     }
